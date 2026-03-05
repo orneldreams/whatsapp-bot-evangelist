@@ -1,49 +1,27 @@
-# WhatsApp Bot Evangelist
+# Guide de Projet WhatsApp Bot pour Évangéliste
 
-**Description**:
-Ce projet vise à créer un chatbot intelligent et automatisé, spécialisé pour un usage évangélique. Le bot communique via WhatsApp avec plusieurs personnes dans le monde entier. Il est conçu pour :
-- Envoyer des messages personnalisés en fonction des besoins de l'utilisateur.
-- Centraliser et suivre toutes les conversations via une base de données.
-- Être extensible et évolutif grâce à des technologies modernes comme Twilio, Redis, PostgreSQL, etc.
+## Objectif Principal
+Ce projet vise à créer un chatbot intelligent sur WhatsApp spécifiquement conçu pour soutenir les activités d'évangélisation.
 
-**Technologies prévues**:
-- **Backend**: Node.js avec NestJS pour la gestion des API et la logique métier.
-- **Base de données**: PostgreSQL pour la gestion des données relationnelles.
-- **Queues**: Redis (avec BullMQ) pour gérer les tâches différées comme les rappels.
-- **Interface WhatsApp**: Twilio API.
-- **Frontend**: React.js pour le tableau de bord utilisateur (hébergé sur Vercel).
+## Technologies Principales
+- **Node.js** : Pour le développement du backend.
+- **NestJS** : Un cadre pour construire des applications efficaces et évolutives.
+- **PostgreSQL** : Pour la gestion des données et la persistance.
+- **Twilio API** : Pour l'intégration de WhatsApp.
 
-**Étapes pour démarrer**:
-1. Clonez ce dépôt :
-```
-git clone https://github.com/orneldreams/whatsapp-bot-evangelist.git
-cd whatsapp-bot-evangelist
-```
+## Structure du Projet Backend
+Le backend sera organisé pour gérer efficacement :
+- **Utilisateurs** : Authentification et gestion des comptes.
+- **Conversations** : Suivi et gestion des interactions avec les utilisateurs.
+- **Intégrations** : Connexion avec d'autres services nécessaires.
 
-2. Installez les dépendances :
-```
-npm install
-```
+## Intégration des Tâches Différées
+Utilisation de **Redis** pour gérer les files d'attente et les tâches différées, permettant un traitement asynchrone des messages et des notifications.
 
-3. Configurez les variables d'environnement :
-Créez un fichier `.env` à la racine, par exemple :
-```
-TWILIO_ACCOUNT_SID=YourTwilioAccountSID
-TWILIO_AUTH_TOKEN=YourTwilioAuthToken
-POSTGRES_URL=YourPostgresDatabaseURL
-REDIS_URL=YourRedisURL
-```
+## Tableau de Bord
+Un tableau de bord construit avec **React.js**, hébergé sur **Vercel**, sera mis en place pour le suivi des conversations et l'analyse des interactions.
 
-4. Lancez l'application en mode développement :
-```
-npm run start:dev
-```
+## Indications d'Évolution Future
+Le projet envisage d'intégrer des moteurs de traitement du langage naturel (NLP) pour améliorer la gestion des dialogues intelligents, offrant ainsi une interaction plus naturelle et engageante avec les utilisateurs.
 
-**Fonctionnalités principales**:
-- Gestion des utilisateurs via WhatsApp.
-- Questions personnalisées et suivi des réponses.
-- Notifications automatisées basées sur des files d'attente.
-
-**Plan d'évolution**:
-- Intégrer un moteur NLP comme Dialogflow ou Rasa.
-- Ajouter la prise en charge multicanal (SMS, E-mail).
+Ce fichier a pour but de fournir un aperçu structuré pour faciliter l'intégration de GitHub Copilot en se basant sur ces concepts clairs et définis.
